@@ -74,7 +74,6 @@
  
  /********************************* General style *********************************/
 
- 
  body{
     font-family: var(--ff-primary);
     font-weight: var(--fw-400);
@@ -121,7 +120,7 @@ h3{
   right: 0;
   top: 0;
   width: 100svw;
- background-color: var(--clr-darkblue);
+  background-color: var(--clr-darkblue);
   transition: top 0.3s, opacity 0.3s;
   opacity: 1;
   z-index: 10; /* para asegurarte que esté encima de otros elementos */
@@ -151,6 +150,7 @@ h3{
   .navigation__item:hover{
     color: var(--clr-ladrillo);
   }
+  /*--- presentation section ---*/
 
  .presentation{ 
    justify-content: center;
@@ -188,6 +188,7 @@ h3{
    width: 28px;
  }
 
+ /*--- About section ---*/
  .about{
    display: grid;
    grid-template-columns: 1fr 1fr;
@@ -195,6 +196,8 @@ h3{
  .about__image{
   align-self: center;
  }
+
+ /*--- Skills section ---*/
 .skill ul{
   padding-inline-start: 0px;
 }
@@ -202,6 +205,7 @@ h3{
   max-width:60px; 
 }
 
+/*--- Hobbies section ---*/
 .hobbies__item{
   max-width:60px; 
 }
@@ -209,6 +213,7 @@ h3{
 font-size: var(--fs-small);
 }
 
+/*--- Academic section ---*/
 .academic__list{
   display: grid;
   grid-template-columns:repeat(3, 1fr);
@@ -238,6 +243,7 @@ max-width: 190px;
   margin: 0;
 }
 
+/*--- Experience section ---*/
 .experience__list{
   display: grid;
   grid-template-columns:repeat(8, 1fr) ;
@@ -277,6 +283,7 @@ max-width: 190px;
   left: 0;
   width: 100%;
   height: 100%;
+  max-height:362px;
   background: var(--overlay-color); 
   mix-blend-mode: multiply;
   /* filter: grayscale(10%) contrast(1) brightness(80%); */
@@ -327,6 +334,7 @@ max-width: 190px;
       color: var(--clr-ladrillo);
   }
   
+  /*--- Contact section ---*/
   .contact__form{
     width: 60%;
     gap: 20px;
@@ -364,6 +372,7 @@ max-width: 190px;
   color: var(--clr-ladrillo);
 }
 
+/*--- footer section ---*/
 .foot{
   justify-content: center;
   align-items: center;
@@ -371,8 +380,12 @@ max-width: 190px;
   opacity: .3;
   margin-top: 100px;
 }
-/* Media Queries para tablets moviles */
+
+/*--- Media queries for mobile responsive ---*/
 @media ( width < 769px ) {
+  .headerNav {
+    background-color: none;
+  }
   .navigation {
     display: none;
     flex-direction: column;
@@ -405,7 +418,7 @@ max-width: 190px;
     grid-template-columns: 1fr;
     
   }  
-  
+
   .skill__list, .hobbies__list {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -423,6 +436,7 @@ max-width: 190px;
     grid-column: 1/-1 !important;
   }
   .project__content{
+    /* background-color:hsla(358, 85%, 52%, 0.452); */
     grid-column: 1/-1;
     text-shadow: 3px 1px 2px black; /* offset-x | offset-y | blur-radius | color */
   }
@@ -434,7 +448,7 @@ max-width: 190px;
 
 /* Media Queries para moviles */
 
-@media (width < 379px) {
+@media (width < 369px) {
 
   .presentation__descrip{
     width:30ch;
