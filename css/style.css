@@ -448,7 +448,7 @@ max-width: 190px;
 
 /* Media Queries para moviles */
 
-@media (width < 369px) {
+@media (width < 500px) {
 
   .presentation__descrip{
     width:30ch;
